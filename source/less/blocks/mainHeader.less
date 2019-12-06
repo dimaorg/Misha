@@ -48,8 +48,14 @@
       border-radius: 3px;
       transition: .4s;
     }
+    &:focus {
+      background-color: #00bfff;
+      &::before, &::after {
+        background-color: #00bfff;
+      }
+    }
   }
-  &:hover, &:focus {
+  &:hover {
     .site-navigation__toggler__button {
       background-color: #00bfff;
       &::before, &::after {
@@ -61,6 +67,11 @@
     .site-navigation__toggler__button {
       background: none;
       transition: .4s;
+      &:focus {
+        &::before, &::after {
+          background-color: #ff0000;
+        }
+      }
     }
 
     .site-navigation__toggler__button::before {
@@ -72,7 +83,7 @@
       bottom: 0;
       transform: rotate(-45deg);
     }
-    &:hover, &:focus {
+    &:hover {
       .site-navigation__toggler__button {
         background: none;
         &::before, &::after {
